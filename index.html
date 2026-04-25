@@ -3,257 +3,400 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verified Picks | Devansh</title>
+    <title>Verified Picks | Devansh – Best Deals on Home & Tech</title>
+    <meta name="description" content="Hand-picked best deals on tech and home products. Verified by Devansh.">
+
+    <!-- Favicon (emoji fallback) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✅</text></svg>">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- AMAZON AFFILIATE DISCLOSURE (Legal Requirement) -->
+    <div class="affiliate-bar">
+        <i class="fas fa-info-circle"></i>
+        As an Amazon Associate, I earn from qualifying purchases. Prices and availability may vary.
+    </div>
+
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="https://png.pngtree.com/png-vector/20250731/ourmid/pngtree-green-verified-badge-stamp-icon-for-approval-and-certification-vector-png-image_16799460.webp" alt="VP" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-                <i class="fas fa-shopping-basket" style="display:none; color: #004e92; font-size: 30px;"></i>
-                <span>Verified Picks | Devansh</span>
-            </div> 
-            <ul class="nav-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Featured</a></li>
-                <li><a href="#">Tech</a></li>
-                <li><a href="#">Blog</a></li>
+                <span class="logo-icon">✅</span>
+                <span class="logo-text">Verified <strong>Picks</strong></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#tech">Tech</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <header class="hero">
+    <header class="hero" id="home">
         <div class="hero-content">
-            <img src="profile.jpg" alt="Devansh" class="profile-pic">
-            <h1>Verified Picks for Home & Tech 🛍️</h1>
-            <p class="tagline">Best products with best deals by Devansh 🔥</p>
-            <div class="contact-info">
-                <p>📧 Shukladevansh1519@gmail.com</p>
-                <p>📞+91 8756335627</p>
+            <img src="profile.jpg" alt="Devansh – Verified Picks" class="profile-pic" onerror="this.style.display='none'">
+            <div class="hero-badge">Hand-Picked Deals</div>
+            <h1>The Best Home & Tech Products 🛍️</h1>
+            <p class="tagline">Curated deals reviewed and verified by Devansh — so you always get the best value.</p>
+            <div class="hero-stats">
+                <div class="stat"><strong>12+</strong><span>Products</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><strong>Top</strong><span>Rated Only</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><strong>100%</strong><span>Verified</span></div>
             </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,60 C360,0 1080,60 1440,20 L1440,60 Z" fill="#f0f4f8"/></svg>
         </div>
     </header>
 
-    <main class="section">
+    <!-- FILTER BUTTONS -->
+    <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Products</button>
+        <button class="filter-btn" data-filter="home">🏠 Home</button>
+        <button class="filter-btn" data-filter="tech">💻 Tech</button>
+        <button class="filter-btn" data-filter="audio">🎧 Audio</button>
+    </div>
+
+    <main class="section" id="featured">
+
         <h2 class="section-title">Featured Products</h2>
+        <p class="section-sub">Best budget picks across home & tech</p>
+
         <div class="products-grid">
 
-            <div class="product-card">
+            <div class="product-card" data-category="audio">
+                <div class="product-badge">Best Seller</div>
                 <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/51iLlET6H7L._SL1377_.jpg" alt="Boat Earbuds">
+                    <img src="https://m.media-amazon.com/images/I/51iLlET6H7L._SL1377_.jpg" alt="Boat Airdopes 161 Elite wireless earbuds">
                 </div>
                 <div class="product-info">
-                    <h3>Boat Earbuds 161 Elite</h3>
+                    <span class="category-tag">Audio</span>
+                    <h3>Boat Airdopes 161 Elite</h3>
                     <p class="price">₹999</p>
-                    <a href="https://amzn.to/3Og8fdp" class="buy-button">Buy on Amazon</a>
+                    <a href="https://amzn.to/3Og8fdp" class="buy-button" target="_blank" rel="nofollow sponsored">
+                        Buy on Amazon <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="home">
                 <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/41fu9W3lNCL._MCnd_AC_.jpg" alt="LED Desk Lamp">
+                    <img src="https://m.media-amazon.com/images/I/41fu9W3lNCL._MCnd_AC_.jpg" alt="LED Desk Lamp with Pen and Phone Holder">
                 </div>
                 <div class="product-info">
+                    <span class="category-tag">Home</span>
                     <h3>LED Desk Lamp with Pen & Phone Holder</h3>
                     <p class="price">₹399</p>
-                    <a href="https://amzn.to/4sfCBL7" class="buy-button">Buy on Amazon</a>
+                    <a href="https://amzn.to/4sfCBL7" class="buy-button" target="_blank" rel="nofollow sponsored">
+                        Buy on Amazon <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="tech">
                 <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/71UiZcqRs7L._SL1488_.jpg" alt="Screen Guard">
+                    <img src="https://m.media-amazon.com/images/I/71UiZcqRs7L._SL1488_.jpg" alt="16 Inch Anti-Glare Screen Protector">
                 </div>
                 <div class="product-info">
+                    <span class="category-tag">Tech</span>
                     <h3>16 Inch Anti-Glare Screen Protector</h3>
                     <p class="price">₹299</p>
-                    <a href="https://amzn.to/4ckSYBi" class="buy-button">Buy on Amazon</a>
+                    <a href="https://amzn.to/4ckSYBi" class="buy-button" target="_blank" rel="nofollow sponsored">
+                        Buy on Amazon <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="home">
                 <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/618fbgWdkQL._SL1500_.jpg" alt="Smart Bulbs">
+                    <img src="https://m.media-amazon.com/images/I/618fbgWdkQL._SL1500_.jpg" alt="12W Emergency Rechargeable LED Bulb">
                 </div>
                 <div class="product-info">
+                    <span class="category-tag">Home</span>
                     <h3>12W Emergency Rechargeable LED Bulb</h3>
                     <p class="price">₹496</p>
-                    <a href="https://amzn.to/4s5dJpd" class="buy-button">Buy on Amazon</a>
+                    <a href="https://amzn.to/4s5dJpd" class="buy-button" target="_blank" rel="nofollow sponsored">
+                        Buy on Amazon <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="home">
                 <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/41rSuhN0J8L._SX342_SY445_QL70_FMwebp_.jpg" alt="Orient Bulb">
+                    <img src="https://m.media-amazon.com/images/I/41rSuhN0J8L._SX342_SY445_QL70_FMwebp_.jpg" alt="Orient Electric 12W Emergency LED Bulb">
                 </div>
                 <div class="product-info">
-                    <h3>Orient Electric 12W Emergency LED bulb</h3>
+                    <span class="category-tag">Home</span>
+                    <h3>Orient Electric 12W Emergency LED Bulb</h3>
                     <p class="price">₹255</p>
-                    <a href="https://amzn.to/4v1Io9P" class="buy-button">Buy on Amazon</a>
+                    <a href="https://amzn.to/4v1Io9P" class="buy-button" target="_blank" rel="nofollow sponsored">
+                        Buy on Amazon <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="home">
                 <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/713fAW3HyUL._SL1280_.jpg" alt="Projection Lamp">
+                    <img src="https://m.media-amazon.com/images/I/713fAW3HyUL._SL1280_.jpg" alt="16-Color LED Sunset Projection Lamp with Remote">
                 </div>
                 <div class="product-info">
+                    <span class="category-tag">Home</span>
                     <h3>16-Color LED Sunset Lamp with Remote</h3>
                     <p class="price">₹279</p>
-                    <a href="https://amzn.to/4bZR5c1" class="buy-button">Buy on Amazon</a>
+                    <a href="https://amzn.to/4bZR5c1" class="buy-button" target="_blank" rel="nofollow sponsored">
+                        Buy on Amazon <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="tech">
                 <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/61dSiAcNJkL._SL1500_.jpg" alt="Keyboard">
+                    <img src="https://m.media-amazon.com/images/I/61dSiAcNJkL._SL1500_.jpg" alt="Zebronics Wireless Keyboard 2.4GHz">
                 </div>
                 <div class="product-info">
-                    <h3>Zebronics Wireless Keyboard, 2.4GHz</h3>
+                    <span class="category-tag">Tech</span>
+                    <h3>Zebronics Wireless Keyboard 2.4GHz</h3>
                     <p class="price">₹549</p>
-                    <a href="https://amzn.to/4dpmmrc" class="buy-button">Buy on Amazon</a>
+                    <a href="https://amzn.to/4dpmmrc" class="buy-button" target="_blank" rel="nofollow sponsored">
+                        Buy on Amazon <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="tech">
                 <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/31L6vrbm4bL._SY300_SX300_QL70_FMwebp_.jpg" alt="Mouse">
+                    <img src="https://m.media-amazon.com/images/I/31L6vrbm4bL._SY300_SX300_QL70_FMwebp_.jpg" alt="Portronics Toad 27 Wireless Mouse">
                 </div>
                 <div class="product-info">
+                    <span class="category-tag">Tech</span>
                     <h3>Portronics Toad 27 Wireless Mouse</h3>
                     <p class="price">₹299</p>
-                    <a href="https://amzn.to/4v89RGN" class="buy-button">Buy on Amazon</a>
+                    <a href="https://amzn.to/4v89RGN" class="buy-button" target="_blank" rel="nofollow sponsored">
+                        Buy on Amazon <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="tech">
                 <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/31rNS40DyyL._SY300_SX300_QL70_FMwebp_.jpg" alt="Camera">
+                    <img src="https://m.media-amazon.com/images/I/31rNS40DyyL._SY300_SX300_QL70_FMwebp_.jpg" alt="CP Plus 3MP Smart Wi-Fi CCTV Camera">
                 </div>
                 <div class="product-info">
-                    <h3>CP PLUS 3MP Smart Wi-Fi CCTV Camera</h3>
+                    <span class="category-tag">Tech</span>
+                    <h3>CP Plus 3MP Smart Wi-Fi CCTV Camera</h3>
                     <p class="price">₹1,999</p>
-                    <a href="https://amzn.to/4seehcu" class="buy-button">Buy on Amazon</a>
+                    <a href="https://amzn.to/4seehcu" class="buy-button" target="_blank" rel="nofollow sponsored">
+                        Buy on Amazon <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="tech">
                 <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/41XFmhyonLL._SY300_SX300_QL70_FMwebp_.jpg" alt="Device Bag">
+                    <img src="https://m.media-amazon.com/images/I/41XFmhyonLL._SY300_SX300_QL70_FMwebp_.jpg" alt="Amazon Basics Travel Organizer Bag">
                 </div>
                 <div class="product-info">
+                    <span class="category-tag">Tech</span>
                     <h3>Amazon Basics Travel Organizer Bag</h3>
                     <p class="price">₹469</p>
-                    <a href="https://amzn.to/4clhfHn" class="buy-button">Buy on Amazon</a>
+                    <a href="https://amzn.to/4clhfHn" class="buy-button" target="_blank" rel="nofollow sponsored">
+                        Buy on Amazon <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="audio">
+                <div class="product-badge">Top Pick</div>
                 <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/71dWbrkoy0L._SL1500_.jpg" alt="Headphone">
+                    <img src="https://m.media-amazon.com/images/I/71dWbrkoy0L._SL1500_.jpg" alt="Boat Rockerz 412 Wireless Headphones 60H Battery">
                 </div>
                 <div class="product-info">
-                    <h3>Boat Rockerz 412, 60H Battery</h3>
+                    <span class="category-tag">Audio</span>
+                    <h3>Boat Rockerz 412 – 60H Battery Life</h3>
                     <p class="price">₹1,299</p>
-                    <a href="https://amzn.to/4s8edeo" class="buy-button">Buy on Amazon</a>
+                    <a href="https://amzn.to/4s8edeo" class="buy-button" target="_blank" rel="nofollow sponsored">
+                        Buy on Amazon <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="home">
                 <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/51kAgKzy79L._SY300_SX300_QL70_FMwebp_.jpg" alt="Study Table">
+                    <img src="https://m.media-amazon.com/images/I/51kAgKzy79L._SY300_SX300_QL70_FMwebp_.jpg" alt="Smart Foldable Laptop Table">
                 </div>
                 <div class="product-info">
+                    <span class="category-tag">Home</span>
                     <h3>Smart Foldable Laptop Table</h3>
                     <p class="price">₹299</p>
-                    <a href="https://amzn.to/4bWqMVr" class="buy-button">Buy on Amazon</a>
+                    <a href="https://amzn.to/4bWqMVr" class="buy-button" target="_blank" rel="nofollow sponsored">
+                        Buy on Amazon <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
         </div>
 
-        <h2 class="section-title">More Tech Products (Best Deals 🔥)</h2>
+        <!-- MORE TECH SECTION -->
+        <h2 class="section-title" id="tech" style="margin-top: 70px;">More Tech Products</h2>
+        <p class="section-sub">Premium deals on bigger items</p>
+
         <div class="products-grid">
 
-            <div class="product-card">
+            <div class="product-card" data-category="tech">
+                <div class="product-badge deal">Best Deal</div>
                 <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/41vBAaU8clL._SX679_.jpg">
+                    <img src="https://m.media-amazon.com/images/I/41vBAaU8clL._SX679_.jpg" alt="Xiaomi Power Bank 4i 20000mAh 33W SuperFast Charging">
                 </div>
                 <div class="product-info">
-                    <h3>Xiaomi Power Bank 4i 20000mAh 33W Super Fast Charging|</h3>
-                    <p class="price">₹1947 (Best Deal🔥)</p>
-                    <a href="https://amzn.to/47HedKX" class="buy-button">Buy on Amazon</a>
+                    <span class="category-tag">Tech</span>
+                    <h3>Xiaomi Power Bank 4i – 20000mAh 33W Fast Charge</h3>
+                    <p class="price">₹1,947</p>
+                    <a href="https://amzn.to/47HedKX" class="buy-button" target="_blank" rel="nofollow sponsored">
+                        Buy on Amazon <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="audio">
+                <div class="product-badge deal">Best Deal</div>
                 <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/71Gn7eWoLUL._SL1500_.jpg">
+                    <img src="https://m.media-amazon.com/images/I/71Gn7eWoLUL._SL1500_.jpg" alt="Zebronics Astra 35 Portable Bluetooth Speaker 16 Watts">
                 </div>
                 <div class="product-info">
-                    <h3>ZEBRONICS Astra 35, Portable Bluetooth Speaker, 16 Watts</h3>
-                    <p class="price">₹739 (Best Deal🔥)</p>
-                    <a href="https://amzn.to/4dr7uIT" class="buy-button">Buy on Amazon</a>
+                    <span class="category-tag">Audio</span>
+                    <h3>Zebronics Astra 35 Portable Bluetooth Speaker – 16W</h3>
+                    <p class="price">₹739</p>
+                    <a href="https://amzn.to/4dr7uIT" class="buy-button" target="_blank" rel="nofollow sponsored">
+                        Buy on Amazon <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="tech">
                 <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/51isRnRDvxL._SL1500_.jpg">
+                    <img src="https://m.media-amazon.com/images/I/51isRnRDvxL._SL1500_.jpg" alt="Motorola 68W GaN TurboPower Fast C-Type Charger">
                 </div>
                 <div class="product-info">
-                    <h3>Motorola 68W Gan TurboPower Fast C-Type Charger</h3>
-                    <p class="price">₹999 (Best Deal🔥)</p>
-                    <a href="https://amzn.to/4bO59GG" class="buy-button">Buy on Amazon</a>
+                    <span class="category-tag">Tech</span>
+                    <h3>Motorola 68W GaN TurboPower USB-C Charger</h3>
+                    <p class="price">₹999</p>
+                    <a href="https://amzn.to/4bO59GG" class="buy-button" target="_blank" rel="nofollow sponsored">
+                        Buy on Amazon <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="tech">
+                <div class="product-badge deal">Best Deal</div>
                 <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/61kMIKm23VL._SL1500_.jpg">
+                    <img src="https://m.media-amazon.com/images/I/61kMIKm23VL._SL1500_.jpg" alt="Apple iPad 11 A16 chip Liquid Retina Display 128GB Wi-Fi">
                 </div>
                 <div class="product-info">
-                    <h3>Apple iPad 11| A16 chip, Liquid Retina Display, 128GB, Wi-Fi</h3>
-                    <p class="price">₹33,900 (Best Deal🔥)</p>
-                    <a href="https://amzn.to/48gxz9Z" class="buy-button">Buy on Amazon</a>
+                    <span class="category-tag">Tech</span>
+                    <h3>Apple iPad 11 – A16 Chip, 128GB, Liquid Retina</h3>
+                    <p class="price">₹33,900</p>
+                    <a href="https://amzn.to/48gxz9Z" class="buy-button" target="_blank" rel="nofollow sponsored">
+                        Buy on Amazon <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <!-- FIXED PART -->
-            <div class="product-card">
+            <div class="product-card" data-category="audio">
                 <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/71h7fLNEQPL._SL1500_.jpg">
+                    <img src="https://m.media-amazon.com/images/I/71h7fLNEQPL._SL1500_.jpg" alt="Sony HT-S20R 5.1ch Dolby Digital Home Theatre System">
                 </div>
                 <div class="product-info">
-                    <h3>Sony HT-S20R Real 5.1ch Dolby Digital Home Theatre System</h3>
-                    <p class="price">₹17,990 (Best Deal🔥)</p>
-                    <a href="https://amzn.to/41QcSOo" class="buy-button">Buy on Amazon</a>
+                    <span class="category-tag">Audio</span>
+                    <h3>Sony HT-S20R – Real 5.1ch Dolby Digital Home Theatre</h3>
+                    <p class="price">₹17,990</p>
+                    <a href="https://amzn.to/41QcSOo" class="buy-button" target="_blank" rel="nofollow sponsored">
+                        Buy on Amazon <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="tech">
+                <div class="product-badge deal">Best Deal</div>
                 <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/81wj0iahGCL._SL1500_.jpg">
+                    <img src="https://m.media-amazon.com/images/I/81wj0iahGCL._SL1500_.jpg" alt="Samsung 43 inch FHD Smart LED TV">
                 </div>
                 <div class="product-info">
-                    <h3>Samsung 108 cm (43 inches) FHD Smart LED TV</h3>
-                    <p class="price">₹24,490 (Best Deal🔥)</p>
-                    <a href="https://amzn.to/4v0pJem" class="buy-button">Buy on Amazon</a>
+                    <span class="category-tag">Tech</span>
+                    <h3>Samsung 43" FHD Smart LED TV</h3>
+                    <p class="price">₹24,490</p>
+                    <a href="https://amzn.to/4v0pJem" class="buy-button" target="_blank" rel="nofollow sponsored">
+                        Buy on Amazon <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
         </div>
     </main>
 
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+        <div class="contact-inner">
+            <h2>Get in Touch</h2>
+            <p>Have a product suggestion or partnership idea? Reach out!</p>
+            <a href="mailto:Shukladevansh1519@gmail.com" class="contact-btn">
+                <i class="fas fa-envelope"></i> Send an Email
+            </a>
+        </div>
+    </section>
+
     <footer>
-        <p>© 2026 ✅Verified Picks | Created by Devansh</p>
-        <p class="disclaimer">Affiliate links may earn us commission</p>
+        <div class="footer-inner">
+            <div class="footer-logo">✅ Verified Picks</div>
+            <p class="footer-copy">© 2026 Verified Picks | Created by Devansh</p>
+            <p class="disclaimer">
+                As an Amazon Associate I earn from qualifying purchases. All affiliate links are marked with #ad.
+                Prices shown are approximate and subject to change.
+            </p>
+        </div>
     </footer>
 
+    <script>
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+        navMenu.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Category filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.product-card');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+                cards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = '';
+                        card.style.animation = 'fadeIn 0.3s ease';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
